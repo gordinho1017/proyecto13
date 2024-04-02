@@ -1,0 +1,37 @@
+{
+    "genero": {
+        "Hombre": 50,
+        "Mujer": 70,
+        "Otro": 10
+    },
+    "edad": {
+        "18-25": 30,
+        "26-35": 45,
+        "36-45": 25,
+        "46-55": 20,
+        "56+": 15
+    },
+    "nombre": {
+        "Juan": 20,
+        "María": 25,
+        "Carlos": 15,
+        "Ana": 30,
+        "Pedro": 10
+    },
+    "ubicacion": {
+        "Extranjeros": 10,
+        "Locales": 30
+    },
+    "admin": {
+        "Admin 1": 2,
+        "Admin 2": 20,
+        "Admin 3": 8,
+        "Admin 4": 15,
+        "Admin 5": 10
+    },
+    "nivel_educativo": {
+        "Primaria": 20,
+        "Secundaria": 40,
+        "Universidad": 60
+    }
+}

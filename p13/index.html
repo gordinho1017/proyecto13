@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio - Reserva de Cancha</title>
+    <link rel="stylesheet" href="bootstrap-5.0.2-dist/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: aquamarine;   
+        }
+        .header, .footer {
+            background-color: #343a40;
+            color: #ffffff;
+            padding: 20px 0;
+        }
+        .footer {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+        }
+        .login-register-links {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+        }
+        @media (max-width: 768px) {
+            .login-register-links {
+                position: relative;
+                top: auto;
+                right: auto;
+                margin-top: 20px;
+            }
+        }
+        .carousel-item img {
+            max-height: 400px;
+            object-fit: cover;
+        }
+        .carousel-item {
+            height: 400px;
+        }
+        .contact-info {
+            overflow: hidden;
+            max-height: 0;
+            transition: max-height 0.3s ease-out;
+        }
+        .contact-info.active {
+            max-height: 500px;
+            transition: max-height 0.3s ease-in;
+        }
+    </style>
+</head>
+<body>
+    <div class="header text-center">
+        <h1>Bienvenido a la Reserva de Cancha</h1>
+        <p>En este aplicativo Web podrás reservar dependiendo del horario disponible en la cancha Gaviotas II </p>
+        <div class="login-register-links">
+            <a href="html/login.html" class="btn btn-primary" target="_blank">Iniciar Sesión</a>
+            <a href="html/registro.html" class="btn btn-success" target="_blank">Registrarse</a>
+        </div>
+    </div>
+
+    <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="img/cancha.jpg" class="d-block w-100" alt="Cancha de fútbol">
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+
+    <div class="container mt-5">
+        <h2 class="text-center mb-4">Información del Administrador</h2>
+        <div class="card">
+            <div class="card-body">
+                <p><strong>Creadores del aplicativo:</strong> Diego Jaraba y Cristian Orellano</p>
+                <p><strong>Correo Electrónico:</strong> dajaraba@unibarranquilla.edu.co</p>
+                <p><strong>Proposito:</strong> Nosotros somos dos jóvenes que quisimos hacer este aplicativo para ayudar a la organización de las canchas de Barranquilla y sus alrededores, más específicamente en el barrio de Las Gaviotas II de Soledad.</p>
+                <p><strong>Contactenos:</strong> En este espacio nos podrá contactar con el correo que le aparece anteriormente para poder resolver cualquiera de sus dudas.</p>
+            </div>
+       

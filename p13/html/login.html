@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>login</title>
+    <link href="../bootstrap-5.0.2-dist/css/bootstrap.min.css" rel="stylesheet" />
+
+    <style>
+        body {
+            background: #ffe259;
+            background:linear-gradient(to right,#ffa751, #ffe259);
+        }
+
+        .bg {
+            background-image: url(../img/can.jpg);
+            background-position: center center;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container w-75 bg-primary mt-5 rounded shadow">
+        <div class="row align-items-stretch">
+            <div class="col bg d-none d-lg-block col-md-5 col-lg-5 col-xl-6 rounded">
+            </div>
+            <div class="col bg-white p-5 rounded-end">
+                <div class="text-end">
+                    <img src="../img/logo.png" width="100" alt="">
+                </div>
+
+                <h2 class="fw-bold text-center py-5">login</h2>
+                <form id="loginForm" action="#">
+                    <div class="mb-4">
+                        <label for="email" class="form-label">Usuario</label>
+                        <input type="email" class="form-control" name="email" id="email">
+                        <div id="emailError" class="text-danger"></div>
+                    </div>
+                    <div class="mb-4">
+                        <label for="password" class="form-label">Contraseña</label>
+                        <input type="password" class="form-control" name="password" id="password">
+                        <div id="passwordError" class="text-danger"></div>
+                    </div>
+                    <div class="d-grid">
+                        <button type="submit" class="btn btn-primary">Ingresar</button>
+                    </div> 
+                    <div class="my-3">
+                        <span>No tienes cuenta? <a href="registro.html">Registrarse</a></span> <br>
+                    </div>       
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="../bootstrap-5.0.2-dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../js/script.js"></script>
+</body>
+</html>

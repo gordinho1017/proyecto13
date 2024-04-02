@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>Registro</title>
+    <link href="../bootstrap-5.0.2-dist/css/bootstrap.min.css" rel="stylesheet" />
+    <style>
+        .form-container {
+            background: #ffa751;
+            background: linear-gradient(to right, #ffa751, #ffe259);
+        }
+    </style>
+</head>
+<body>
+    <div class="container-fluid bg-light py-5">
+        <div class="container w-75 form-container rounded shadow">
+            <div class="row justify-content-center">
+                <div class="col-12 col-md-8 col-lg-6 p-5">
+                    <h2 class="fw-bold text-center mb-4">Registro</h2>
+                    <form id="registroForm" action="#">
+                        <div class="mb-3">
+                            <label for="nombre" class="form-label">Nombre</label>
+                            <input type="text" class="form-control" name="nombre" id="nombre" required>
+                            <div id="nombreError" class="text-danger"></div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="password" class="form-label">Contraseña</label>
+                            <input type="password" class="form-control" name="password" id="password" minlength="6" maxlength="10" required>
+                            <div id="passwordError" class="text-danger"></div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email</label>
+                            <input type="email" class="form-control" name="email" id="email" required>
+                            <div id="emailError" class="text-danger"></div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="id" class="form-label">ID</label>
+                            <input type="text" class="form-control" name="id" id="id" pattern="[0-9]{10}" required>
+                            <div id="idError" class="text-danger"></div>
+                        </div>
+                        <div class="d-grid">
+                            <button type="submit" class="btn btn-primary">Registrarse</button>
+                        </div> 
+                        <div class="text-center mt-3">
+                            <span>¿Ya tienes cuenta? <a href="login.html">Iniciar sesión</a></span>
+                        </div>       
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../bootstrap-5.0.2-dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../js/registro.js"></script>
+</body>
+</html>

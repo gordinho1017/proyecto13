@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Horario de Disponibilidad</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Font Awesome CSS -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+  <!-- Custom CSS -->
+  <style>
+    .available {
+      background-color: #c3e6cb;
+    }
+    .unavailable {
+      background-color: #f5c6cb;
+    }
+  </style>
+</head>
+<body>
+  <div class="container mt-5">
+    <h2 class="text-center mb-4">Horario de Disponibilidad</h2>
+    <div class="row">
+      <div class="col-md-6 mx-auto">
+        <table class="table table-bordered text-center">
+          <thead>
+            <tr>
+              <th scope="col">Hora</th>
+              <th scope="col">Disponibilidad</th>
+            </tr>
+          </thead>
+          <tbody id="schedule-body">
+            <!-- Aquí se insertarán las filas de la tabla -->
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap JS y Popper.js (requerido para algunos componentes de Bootstrap) -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+  <!-- jQuery (requerido para algunas funcionalidades de Bootstrap) -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script>
+    // Horas disponibles (ejemplo)
+    const availableHours = ["9:00", "10:00", "11:00", "13:00", "14:00", "15:00", "16:00"];
+
+    // Función para generar las filas de la tabla
+    function generateSchedule() {
+      const tbody = document.getElementById('schedule-body');
+
+      availableHours.forEach(hour => {
+        const row = document.createElement('tr');
+        const hourCell = document.createElement('td');
+        hourCell.textContent = hour;
+        row.appendChild(hourCell);
+
+        const availabilityCell = document.createElement('td');
+        availabilityCell.classList.add('availability');
+        availabilityCell.textContent = 'Disponible';
+        row.appendChild(availabilityCell);
+
+        tbody.appendChild(row);
+      });
+    }
+
+    // Función para marcar las horas no disponibles
+    function markUnavailableHours(unavailableHours) {
+      unavailableHours.forEach(hour => {
+        const cell = document.querySelector(`#schedule-body td:first-child:contains('${hour}')`);
+        if (cell) {
+          cell.nextElementSibling.classList.remove('available');
+          cell.nextElementSibling.classList.add('unavailable');
+          cell.nextElementSibling.textContent = 'No disponible';
+        }
+      });
+    }
+
+    // Llamada a las funciones para generar y marcar el horario
+    $(document).ready(function() {
+      generateSchedule();
+      const unavailableHours = ["10:00", "13:00", "15:00"]; // Ejemplo de horas no disponibles
+      markUnavailableHours(unavailableHours);
+    });
+  </script>
+</body>
+</html>

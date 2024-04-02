@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Página de Usuario Común</title>
+  <link href="../bootstrap-5.0.2-dist/css/bootstrap.rtl.min.css" rel="stylesheet">
+  <style>
+    body {
+      background-color: #f0f0f0;
+    }
+    header {
+      background-color: #17a2b8;
+      color: #fff;
+      padding: 20px 0;
+      text-align: center;
+    }
+    section {
+      padding: 40px 20px;
+      background-color: #fff;
+      border-radius: 10px;
+    }
+    footer {
+      background-color: #343a40;
+      color: #fff;
+      padding: 20px 0;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>Bienvenido Usuario</h1>
+    </div>
+  </header>
+  
+  <section class="container my-5">
+    <div class="row">
+      <div class="col-md-6">
+        <h2>Reserva de Canchas</h2>
+        <p>Este espacio es reservado para usted donde podrá reservar y ver la disponibilidad de las canchas a las cuales quiera acceder.</p>
+        <div>
+          <label for="datetimepicker">Seleccione la fecha y hora:</label>
+          <div class="input-group date" id="datetimepicker" data-target-input="nearest">
+            <input type="text" class="form-control datetimepicker-input" data-target="#datetimepicker" readonly>
+            <div class="input-group-append" data-target="#datetimepicker" data-toggle="datetimepicker">
+              <div class="input-group-text"><i class="fa fa-calendar"></i></div>
+            </div>
+          </div>
+          <button class="btn btn-primary mt-3" id="verDisponibilidad">reservar</button>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <h2>Calendario de Disponibilidad</h2>
+        <div id="calendario">
+          <pclass="col-md-4">Calendario de disponibilidad para la fecha y hora seleccionada.</p>
+          <a href="horario.html">Horario</a>
+
+        </div>
+      </div>
+        </div>
+  </section>
+  
+  <footer>
+    <div class="container">
+      <p>Pie de página - Página de Usuario Común</p>
+    </div>
+  </footer>
+
+
+  <script src="../bootstrap-5.0.2-dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../js/usuario.js"></script>
+  <script>
+    document.getElementById('verDisponibilidad').addEventListener('click', function() {
+      var fechaSeleccionada = document.getElementById('datetimepicker').value;
+      alert('Implementación de ver disponibilidad para la fecha y hora: ' + fechaSeleccionada);
+      document.getElementById('calendarioTexto').innerHTML = 'Calendario de disponibilidad para la fecha y hora ' + fechaSeleccionada + '.';
+    });
+  </script>
+</body>
+</html>
